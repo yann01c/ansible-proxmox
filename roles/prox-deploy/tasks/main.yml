@@ -1,0 +1,10 @@
+- name: Create new container with minimal options
+  community.general.proxmox:
+    vmid: 103
+    node: main
+    api_user: root@pam
+    api_password: {{ VAULT_ProxPW }}
+    api_host: prox-node1
+    password: WelcomeHAAS$2024
+    hostname: rproxyext01.haas.ch 
+    ostemplate: 'local:vztmpl/ubuntu-14.04-x86_64.tar.gz'
